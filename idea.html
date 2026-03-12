@@ -1,1 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invention Inc. - Предложить идею</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+    
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="logo">Invention Inc.</a>
+            <div class="nav-right">
+                <div class="lang-switcher">
+                    <button class="lang-btn" data-lang="ru">RU</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="idea.html" class="nav-link active" data-i18n="nav.idea">Предложить идею</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
+    <main class="idea-page">
+        <div class="idea-container">
+            <h1 class="page-title" data-i18n="idea.title">Поделитесь своей идеей</h1>
+            <p class="idea-subtitle" data-i18n="idea.subtitle">Каждое великое изобретение начиналось с идеи</p>
+            
+            <form id="ideaForm" class="idea-form">
+                <div class="form-group">
+                    <label for="ideaContent" data-i18n="idea.label">Ваша идея:</label>
+                    <textarea 
+                        id="ideaContent" 
+                        name="content" 
+                        rows="8" 
+                        data-i18n="idea.placeholder"
+                        placeholder="Опишите вашу идею здесь..."
+                        required
+                    ></textarea>
+                </div>
+                
+                <div id="formMessage" class="form-message"></div>
+                
+                <button type="submit" class="submit-btn">
+                    <span data-i18n="idea.submit">Отправить идею</span>
+                    <div class="spinner hidden"></div>
+                </button>
+            </form>
+            
+            <div class="idea-note">
+                <p data-i18n="idea.note">🔬 Все идеи рассматриваются нашей командой экспертов</p>
+            </div>
+        </div>
+    </main>
+
+    <script src="languages.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
